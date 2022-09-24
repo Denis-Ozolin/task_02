@@ -1,0 +1,18 @@
+.default,
+.accent {
+  padding: 4px 6px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.default:hover,
+.accent:hover {
+  background-color: #bbb6b6;
+}
+
+.accent {
+  padding: 10px 30px;
+  font-weight: 500;
+}

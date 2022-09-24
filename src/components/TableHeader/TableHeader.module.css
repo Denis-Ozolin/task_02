@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.titleList {
+  display: flex;
+  padding: 0 20px;
+  line-height: 40px;
+  gap: 30px;
+}
+
+.title,
+.statTitle {
+  width: 172px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.statTitle:first-child{
+  width: 340px;
+}
+
+.headerNav {
+  margin-left: auto;
+}
