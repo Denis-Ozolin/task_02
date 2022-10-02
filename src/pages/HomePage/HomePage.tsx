@@ -1,6 +1,5 @@
 import React from 'react';
 
-import css from './HomePage.module.css';
 import { Table, Modal, NoteForm } from '../../components';
 
 function Home() {
@@ -11,7 +10,7 @@ function Home() {
   }
 
   return (
-    <div className={css.container}>
+    <div className='flex flex-col items-center px-0 py-8 gap-8'>
       <Table closeModal={toggleModal} />
       <Table  statTable/>
       {isOpenModal &&

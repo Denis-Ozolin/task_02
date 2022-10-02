@@ -1,7 +1,5 @@
 import React from 'react';
 
-import css from './Button.module.css';
-
 interface ButtonProps {
   children: React.ReactNode,
   onClick?: () => void,
@@ -10,10 +8,8 @@ interface ButtonProps {
 }
 
 function Button({ children, onClick, accent, type='button' }: ButtonProps) { 
-  const stylesBtn = !accent ? css.default : css.accent;
-
   return (
-    <button onClick={onClick} className={stylesBtn} type={type}>{children}</button>
+    <button onClick={onClick} className={`bg-white border-black rounded-sm border-solid border cursor-pointer text-xs p-1 hover:bg-bgc-hex ${!accent? '': 'font-medium text-base py-2 px-8'}`} type={type}>{children}</button>
   )
 }
 
