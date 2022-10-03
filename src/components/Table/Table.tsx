@@ -1,6 +1,5 @@
 import React from 'react';
 
-import css from './Table.module.css';
 import { TableHeader, TableBody, Button } from '..';
 import { notesSelectors } from '../../redux/notes';
 import { useAppSelector } from '../../hooks/hook';
@@ -14,10 +13,10 @@ function Table ({ closeModal, statTable }: TableProps) {
   const isArchived = useAppSelector(notesSelectors.getShowArchived);
   
   return (
-      <div className={css.table}>
+      <div className='border-black rounded-sm border-solid border p-8 bg-bgc-hex w-table-w'>
         <TableHeader statTable={statTable} isArchived={isArchived} />
         <TableBody statTable={statTable} isArchived={isArchived} />
-        {!statTable && <div className={css.button}>
+        {!statTable && <div className='flex justify-end'>
           {!isArchived && <Button onClick={closeModal} accent>Create</Button>}
         </div>}
       </div>

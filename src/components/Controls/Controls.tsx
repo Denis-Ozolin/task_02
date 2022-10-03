@@ -1,6 +1,5 @@
 import React from 'react';
 
-import css from './Controls.module.css';
 import { Button, Modal, NoteForm } from '..';
 import { toggleArchivedNote, removeNote } from '../../redux/notes/notesSlice';
 import { notesSelectors } from '../../redux/notes';
@@ -33,7 +32,7 @@ function Controls({ id, isArchived }: ControlsProps) {
 
   return (
     <>
-      <div className={css.controls}>
+      <div className='flex items-center justify-between ml-auto gap-1'>
         <Button onClick={toggleEditing}>Edit</Button>
         <Button onClick={toggleArchiveHandler}>{archivedBtnName}</Button>
         <Button onClick={() => dispatch(removeNote(id))}>Delete</Button>
