@@ -24,16 +24,14 @@ function Modal({ children, closeModal }: ModalProps){
     };
   });
   return (
-    <>
-      <div onClick={handleBackdropClick} className='bg-backdrop-rgba flex items-center justify-center h-screen fixed top-0 left-0 w-screen z-100'>
-        <div className='bg-bgc-hex border-black rounded-sm border-solid border flex justify-center relative w-modal-w h-modal-h'>
-          <div className='absolute z-110 top-5 right-5'>
-            <Button onClick={closeModal}>Close</Button>
-          </div>
-          {children}
+    <div onClick={handleBackdropClick} className='bg-backdrop-rgba flex items-center justify-center h-screen fixed top-0 left-0 w-screen z-100'>
+      <div className='bg-bgc-hex border-black rounded-sm border-solid border flex justify-center relative w-modal-w h-modal-h'>
+        <div className='absolute z-110 top-5 right-5'>
+          <Button onClick={closeModal}>Close</Button>
         </div>
+        {children}
       </div>
-    </>
+    </div>
   )
 }
 
